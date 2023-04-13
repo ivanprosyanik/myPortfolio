@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+  <link rel="manifest" href="favicon/site.webmanifest">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Roboto:wght@500&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="css/style.min.css">
+  <title>Portfolio of Ivan Prosyanik</title>
+</head>
+
+<body id="body">
+  <div class="wrapper">
+    <header class="header mb-130">
+      <div class="container">
+        <nav class="header-nav">
+          <button class="burger" type="button">
+            <span class="burger__line"></span>
+            <span class="sr-only">Открыть меню</span>
+          </button>
+          <ul class="menu">
+            <li class="menu__item">
+              <a class="menu__link" href="#about">About me</a>
+            </li>
+            <li class="menu__item">
+              <a class="menu__link" href="#portfolio">Portfolio</a>
+            </li>
+          </ul>
+          <a href="#body" class="menu__link logo-link">
+            <img class="logo logo-desc" src="images/logo-desc.svg" alt="logo">
+          </a>
+          <a href="#body" class="menu__link logo-link logo-link--mobile">
+            <img class="logo logo-mobile" src="images/header_logo-mobile.svg" alt="logo">
+          </a>
+          <ul class="menu">
+            <li class="menu__item">
+              <a class="menu__link" href="#contact">Сontact me</a>
+            </li>
+            <li class="menu__item">
+              <div class="social menu__social">
+                <a class="social__link social__link--telegram" target="_blank" href="https://t.me/vanchp"></a>
+                <a class="social__link social__link--instagram" target="_blank"
+                  href="https://www.instagram.com/vanyaprosianik/?next=%2F"></a>
+              </div>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <div class="mobile-nav">
+        <div class="container">
+          <div class="mobile-nav__head">
+            <a href="#body" class="menu__link logo-link logo-link--mobile">
+              <img class="logo logo-mobile" src="images/header_logo-mobile.svg" alt="logo">
+            </a>
+            <button class="close-btn close-burger" type="button"></button>
+          </div>
+          <ul class="menu mobile-nav__menu">
+            <li class="menu__item">
+              <a class="menu__link" href="#about">About me</a>
+            </li>
+            <li class="menu__item">
+              <a class="menu__link" href="#portfolio">Portfolio</a>
+            </li>
+            <li class="menu__item">
+              <a class="menu__link" href="#contact">Сontact me</a>
+            </li>
+            <li class="menu__item">
+              <div class="social menu__social">
+                <a class="social__link social__link--telegram" target="_blank" href="https://t.me/vanchp"></a>
+                <a class="social__link social__link--instagram" target="_blank"
+                  href="https://www.instagram.com/vanyaprosianik/?next=%2F"></a>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+    </header>
+    <main class="main">
+      <h1 class="sr-only">Portfolio of Ivan Prosyanik</h1>
+      <section class="hero-mobile mb-130">
+        <div class="container">
+          <div class="hero__inner">
+            <h2 class="title hero__title">
+              Ivan Prosyanik
+            </h2>
+            <img class="hero__img" src="images/Photo-big/1.jpg" alt="my photo">
+            <div class="hero__offer">
+              <p class="text hero__text">
+                Junior frontend developer
+                18 y.o, Jurmala, Latvia
+              </p>
+              <a class="hero__offer-btn" href="#about">See more</a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="hero mb-130">
+        <div class="container">
+          <div class="hero__inner">
+            <div class="hero__offer">
+              <h2 class="title hero__title">
+                Ivan Prosyanik
+              </h2>
+              <p class="text hero__text">
+                Junior frontend developer
+                18 y.o, Jurmala, Latvia
+              </p>
+              <a class="hero__offer-btn" href="#about">See more</a>
+            </div>
+            <img class="hero__img" src="images/Photo-big/1.jpg" alt="my photo">
+          </div>
+        </div>
+      </section>
+
+      <section class="about mb-130" id="about">
+        <div class="container">
+          <h2 class="title about__title">About me</h2>
+          <div class="about__inner">
+            <img class="about__img" src="images/Photo-big/2.jpg" alt="my photo">
+            <div class="about-info">
+              <div class="about-info__text">
+                <p>
+                  Hello World! My name is Vanya and I'm a junior frontend developer.
+                </p>
+                <p>
+                  I am 18 years old, I live in the city of Jurmala, the country of Latvia. I myself am from Ukraine,
+                  Donetsk
+                  region.
+                  Because of the hostilities,
+                  I had to leave my home and my country.
+                </p>
+                <p>
+                  As for my profession. I specialize in website development, namely layout. I have sufficient experience
+                  in
+                  this area.
+                </p>
+              </div>
+              <ul class="about-info__list">
+                My main skills are:
+                <li>HTML 5,</li>
+                <li>CSS 3,</li>
+                <li>JavaScript,</li>
+                <li>jQuery,</li>
+              </ul>
+              <div class="about-info__text">
+                <p>
+                  Also, in development I use GULP and also
+                  I have experience with GIT.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="portfolio mb-130" id="portfolio">
+        <div class="container">
+          <h2 class="title portfolio__title">Portfolio</h2>
+          <p class="text portfolio__text">Here is a current list of my portfolio!</p>
+          <ul class="portfolio-nav">
+            <li class="portfolio-nav__item">
+              <button class="portfolio-nav__btn active" type="submit" data-filter="all">All</button>
+            </li>
+            <li class="portfolio-nav__item">
+              <button class="portfolio-nav__btn" type="submit" data-filter="category-1">Landing page</button>
+            </li>
+            <li class="portfolio-nav__item">
+              <button class="portfolio-nav__btn" type="submit" data-filter="category-2">Corporate</button>
+            </li>
+            <li class="portfolio-nav__item">
+              <button class="portfolio-nav__btn" type="submit" data-filter="category-3">Online Store</button>
+            </li>
+          </ul>
+          <ul class="portfolio-list">
+            <li class="portfolio__item category-1">
+              <article class="portfolio-card">
+                <figure class="portfolio-card__head">
+                  <a class="portfolio-card__link" target="_blank" href="https://ivanprosyanik.github.io/portfolio/">
+                    <img class="portfolio-card__img" src="images/portfolio/1.jpg" alt="first job">
+                  </a>
+                </figure>
+                <div class="portfolio-card__name">
+                  <a class="portfolio-card__link-text" target="_blank"
+                    href="https://ivanprosyanik.github.io/portfolio/">
+                    Portfolio for Serhiy Sirko
+                  </a>
+                </div>
+              </article>
+            </li>
+            <li class="portfolio__item category-1">
+              <article class="portfolio-card">
+                <figure class="portfolio-card__head">
+                  <a class="portfolio-card__link" target="_blank" href="https://ivanprosyanik.github.io/portfolio/">
+                    <img class="portfolio-card__img" src="images/portfolio/1.jpg" alt="first job">
+                  </a>
+                </figure>
+                <div class="portfolio-card__name">
+                  <a class="portfolio-card__link-text" target="_blank"
+                    href="https://ivanprosyanik.github.io/portfolio/">
+                    Portfolio for Serhiy Sirko
+                  </a>
+                </div>
+              </article>
+            </li>
+            <li class="portfolio__item category-1">
+              <article class="portfolio-card">
+                <figure class="portfolio-card__head">
+                  <a class="portfolio-card__link" target="_blank" href="https://ivanprosyanik.github.io/portfolio/">
+                    <img class="portfolio-card__img" src="images/portfolio/1.jpg" alt="first job">
+                  </a>
+                </figure>
+                <div class="portfolio-card__name">
+                  <a class="portfolio-card__link-text" target="_blank"
+                    href="https://ivanprosyanik.github.io/portfolio/">
+                    Portfolio for Serhiy Sirko
+                  </a>
+                </div>
+              </article>
+            </li>
+            <li class="portfolio__item category-2">
+              <article class="portfolio-card">
+                <figure class="portfolio-card__head">
+                  <a class="portfolio-card__link" target="_blank" href="https://ivanprosyanik.github.io/portfolio/">
+                    <img class="portfolio-card__img" src="images/portfolio/1.jpg" alt="first job">
+                  </a>
+                </figure>
+                <div class="portfolio-card__name">
+                  <a class="portfolio-card__link-text" target="_blank"
+                    href="https://ivanprosyanik.github.io/portfolio/">
+                    Portfolio for Serhiy Sirko
+                  </a>
+                </div>
+              </article>
+            </li>
+            <li class="portfolio__item category-3">
+              <article class="portfolio-card">
+                <figure class="portfolio-card__head">
+                  <a class="portfolio-card__link" target="_blank" href="https://ivanprosyanik.github.io/portfolio/">
+                    <img class="portfolio-card__img" src="images/portfolio/1.jpg" alt="first job">
+                  </a>
+                </figure>
+                <div class="portfolio-card__name">
+                  <a class="portfolio-card__link-text" target="_blank"
+                    href="https://ivanprosyanik.github.io/portfolio/">
+                    Portfolio for Serhiy Sirko
+                  </a>
+                </div>
+              </article>
+            </li>
+            <li class="portfolio__item category-2">
+              <article class="portfolio-card">
+                <figure class="portfolio-card__head">
+                  <a class="portfolio-card__link" target="_blank" href="https://ivanprosyanik.github.io/portfolio/">
+                    <img class="portfolio-card__img" src="images/portfolio/1.jpg" alt="first job">
+                  </a>
+                </figure>
+                <div class="portfolio-card__name">
+                  <a class="portfolio-card__link-text" target="_blank"
+                    href="https://ivanprosyanik.github.io/portfolio/">
+                    Portfolio for Serhiy Sirko
+                  </a>
+                </div>
+              </article>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <section class="contact mb-130" id="contact">
+        <div class="container">
+          <h2 class="title contact__title">Contact Me</h2>
+          <p class="text contact__text">
+            You can write me your message by mail,
+            or contact me in such social networks
+          </p>
+          <div class="contact__inner">
+            <form class="contact-form" action="#">
+              <div class="contact-form__group">
+                <label class="sr-only" for="name"></label>
+                <input type="text" class="contact-form__input" id="name" name="name" placeholder="Name *" required>
+              </div>
+              <div class="contact-form__group">
+                <label class="sr-only" for="email"></label>
+                <input type="email" class="contact-form__input" id="email" name="email" placeholder="E-mail *" required>
+              </div>
+              <div class="contact-form__group">
+                <label class="sr-only" for="message"></label>
+                <textarea class="contact-form__field" name="message" id="message"
+                  placeholder="Your message *"></textarea>
+              </div>
+              <button class="btn contact-form__btn" type="submit">Send message</button>
+            </form>
+            <div class="contact-actions">
+              <img class="contact-actions__img" src="images/Photo-big/3.jpg" alt="my photo">
+              <div class="contact-actions__item">
+                <p class="text">
+                  Send message in telegram
+                </p>
+                <a class="social__link social__link--telegram" target="_blank" href="https://t.me/vanchp"></a>
+              </div>
+              <div class="contact-actions__item contact-actions__item--insta">
+                <p class="text">
+                  Like me on instagram ;)
+                </p>
+                <a class="social__link social__link--instagram" target="_blank"
+                  href="https://www.instagram.com/vanyaprosianik/?next=%2F"></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="container">
+        <nav class="footer-nav">
+          <ul class="menu footer__menu">
+            <li class="menu__item">
+              <a class="menu__link" href="#about">About me</a>
+            </li>
+            <a href="#body" class="menu__link logo-link">
+              <img class="logo logo-desc" src="images/footer_logo-desc.svg" alt="logo">
+            </a>            
+            <li class="menu__item">
+              <a class="menu__link" href="#portfolio">Portfolio</a>
+            </li>
+          </ul>
+          <a href="#body" class="menu__link logo-link logo-link--mobile">
+            <img class="logo logo-mobile" src="images/footer_logo-mobile.svg" alt="logo">
+          </a>
+        </nav>
+      </div>
+    </footer>
+  </div>
+
+
+
+
+  <script src="js/main.js"></script>
+</body>
+
+</html>

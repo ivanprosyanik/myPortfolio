@@ -1,0 +1,410 @@
+@import 'reset';
+@import 'mixins';
+@import 'vars';
+@import 'global';
+
+.header {
+  margin-bottom: size(130, 25);
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 99;
+  background-color: #fff;
+  transition: box-shadow .3s ease-in-out;
+  border-bottom: 1px solid #000;
+
+  &-nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px 0;
+    gap: size(130, 60);
+
+    @include r($tablet-2) {
+      justify-content: space-between;
+    }
+  }
+
+  &.sticky {
+    box-shadow: -5px 5px 40px rgba(0, 0, 0, 0.3);
+  }
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: size(130, 60);
+
+  @include r($tablet-2) {
+    display: none;
+  }
+
+  &__link {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    font-size: 22px;
+  }
+
+  &__social {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  }
+}
+
+.mobile-nav {
+  transform: translateY(-200%);
+  opacity: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 15px 0;
+  z-index: 999;
+  transition: transform .3s ease-in-out, opacity .3s ease-in-out;
+
+  &__head {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 50px;
+  }
+
+  & .menu {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  &.active {
+    opacity: 1;
+    background-color: #fff;
+    transform: translateY(0);
+  }
+}
+
+.social {
+
+  &__link--telegram,
+  &__link--instagram {
+    display: flex;
+    min-width: 30px;
+    height: 30px;
+    mask-repeat: no-repeat;
+    mask-position: center;
+    background-color: #000;
+    mask-size: 30px;
+    transition: background-color .3s ease-in-out;
+  }
+
+  &__link--telegram {
+    mask-image: url(../images/icons/telegram.svg);
+
+    &:hover {
+      background-color: #0088cc;
+    }
+  }
+
+  &__link--instagram {
+    mask-image: url(../images/icons/instagram.svg);
+
+    &:hover {
+      background-color: rgba(#cc2366, .7);
+    }
+  }
+}
+
+.hero {
+  @include r($tablet) {
+    display: none;
+  }
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @include r($tablet) {
+      flex-direction: column;
+    }
+  }
+
+  &__offer {
+    display: flex;
+    flex-direction: column;
+    max-width: 289px;
+
+  }
+
+  &__text {
+    margin-bottom: 30px
+  }
+
+  &__offer-btn {
+    display: block;
+    padding-right: 38px;
+    padding-bottom: 10px;
+    align-items: center;
+    position: relative;
+
+    &::before {
+      content: '';
+      position: absolute;
+      right: 80px;
+      top: 5%;
+      width: 20px;
+      height: 20px;
+      mask-image: url(../images/icons/chevron.svg);
+      mask-repeat: no-repeat;
+      mask-position: center;
+      mask-size: contain;
+      background-color: #000;
+    }
+  }
+}
+
+.hero-mobile {
+  display: none;
+
+  & .hero__title {
+    max-width: size(268, 157);
+    text-align: center;
+  }
+
+  & .hero__img {
+    margin-bottom: 25px;
+  }
+
+  @include r($tablet) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+}
+
+.about {
+  &__inner {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    justify-content: space-between;
+
+    @include r($tablet-2) {
+      flex-direction: column;
+    }
+  }
+
+  &__title {
+    @include r($tablet-2) {
+      text-align: center;
+    }
+  }
+
+  &-info {
+    max-width: 675px;
+  }
+
+  &-info__text {
+    p {
+      margin-bottom: 25px;
+    }
+  }
+}
+
+.portfolio {
+  text-align: center;
+
+  &__text {
+    margin-bottom: size(50, 30);
+  }
+
+  &-nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: size(90, 45);
+    gap: size(40, 15);
+
+    @include r($tablet-2) {
+      flex-direction: column;
+    }
+  }
+
+  &-nav__btn {
+    font-size: size(30, 25);
+    font-weight: 700;
+    color: rgba(#000, .5);
+    transition: border-bottom .3s ease-in-out, color .3s ease-in-out;
+
+    &:hover {
+      color: #000;
+    }
+  }
+
+  &-nav__btn.active {
+    border-bottom: 3px solid #000;
+    color: #000;
+  }
+
+  &-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: size(21, 15);
+
+    margin-bottom: 15px;
+
+    @include r($tablet) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include r($phone) {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+  &__item {
+    transition: opacity .3s ease-in-out, outline-color .3s ease-in-out;
+    outline: 1px solid transparent;
+  }
+}
+
+.portfolio-card {
+
+  &__link {
+    display: flex;
+  }
+
+  &__link-text {
+    font-size: size(20, 18);
+  }
+
+  &__name {
+    text-align: center;
+    padding: size(15, 11) size(15, 11);
+    border: 1px solid #000;
+
+  }
+
+  &__img {
+    display: flex;
+    box-shadow: none;
+  }
+}
+
+.contact {
+
+  @include r($tablet-2) {
+    text-align: center;
+  }
+
+  &__text {
+    max-width: 480px;
+    margin-bottom: 15px;
+
+    @include r($tablet-2) {
+      margin: 0 auto;
+    }
+
+    @include r($phone) {
+      max-width: 319px;
+    }
+  }
+
+  &__inner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: size(231, 30);
+
+    @include r($tablet-2) {
+      display: block;
+      max-width: 962px;
+    }
+  }
+}
+
+.contact-form {
+
+  &__field,
+  &__input {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 30px;
+    border: 1px solid #000;
+
+    &::placeholder {
+      color: rgba(#000, .7)
+    }
+  }
+
+  &__input {
+    border: {
+      top: 0;
+      right: 0;
+      left: 0;
+    }
+  }
+
+  &__field {
+    resize: none;
+    min-height: 300px;
+  }
+
+  &__btn {
+    @include r($tablet-2) {
+      margin: 0 auto 30px;
+    }
+  }
+}
+
+.contact-actions {
+
+  &__img {
+    margin-bottom: 20px;
+
+    @include r($tablet-2) {
+      margin: 0 auto 30px;
+    }
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+    @include r($tablet-2) {
+      justify-content: center;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 15px;
+    }
+
+    &--insta {
+      gap: 53px;
+    }
+  }
+}
+
+.footer {
+  padding: 15px;
+  background-color: #000;
+
+  &-nav {
+    @extend .header-nav;
+    color: #fff;
+    border-bottom: 1px solid #fff;
+  }
+
+  &__menu {
+    gap: 248px;
+  }
+
+  .logo-link--mobile {
+    margin: 0 auto;
+  }
+}
